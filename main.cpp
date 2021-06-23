@@ -5,8 +5,8 @@
 using namespace std;
 
 main() {
-    // PLACEHOLDER //
+    // *PLACEHOLDER* //
     cout << "Press ENTER to continue....." << endl;
     cin.ignore(1);
-    // /////////// //
+    // ///////////// //
 }
