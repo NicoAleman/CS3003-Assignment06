@@ -1,14 +1,19 @@
+#include "ItemQueue.h"
+#include <string>
+using namespace std;
+
 class Consumer {
     public:
-        Consumer() {
-            
+        Consumer(string nameIn, ItemQueue queueIn) {
+            name = nameIn;
+            queue = queueIn;
         }
 
-        void run() {
-            while(true) {
-                
-            }
+        void consume() {
+
         }
+
     private:
-    
+        ItemQueue queue;
+        string name;
 };

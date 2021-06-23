@@ -1,14 +1,20 @@
+#include "ItemQueue.h"
+#include <string>
+using namespace std;
+
 class Producer {
     public:
-        Producer() {
-            
+        Producer(string nameIn, ItemQueue queueIn) {
+            name = nameIn;
+            queue = queueIn;
         }
 
-        void run() {
-            while(true) {
-                
-            }
+        void produce() {
+
         }
+
     private:
-    
+        ItemQueue queue;
+        string name;
+        int itemId;
 };

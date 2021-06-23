@@ -1,3 +1,6 @@
+#include "Producer.cpp"
+#include "Consumer.cpp"
+
 #include <iostream>
 using namespace std;
 
