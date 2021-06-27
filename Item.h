@@ -6,6 +6,11 @@ using namespace std;
 
 class Item {
     public:
+        Item() {
+            producer = "N/A";
+            id = 0;
+        }
+
         Item(string prodIn, int idIn) {
             producer = prodIn;
             id = idIn;

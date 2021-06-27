@@ -2,31 +2,46 @@
 #define ItemQueue_H
 
 #include "Item.h"
-#include <vector>
 
 class ItemQueue {
     public:
-        ItemQueue() {}
+        ItemQueue() {
+            queue_size = 0;
+        }
 
         // Returns if queue is empty
         bool isEmpty() {
-            return queue.empty();
+            return (queue_size == 0);
+        }
+
+        // Returns if queue is full
+        bool isFull() {
+            return (queue_size == 10);
+        }
+
+        // Returns queue size
+        int size() {
+            return queue_size;
         }
 
         // Adds item to back of queue
         void put(Item item) {
-            queue.push_back(item);
+            queue[queue_size];
+            queue_size += 1;
         }
 
         // Returns and removes item from front of queue
         Item take() {
-            Item thing = queue.front();
-            queue.erase(queue.begin());
+            Item thing = queue[0];
+            for (int i = 0; i < 9; i++) { // Remove front item of queue and shift elements forward
+                queue[i] = queue[i + 1];
+            }
             return thing;
         }
 
     private:
-        vector<Item> queue;
+        Item queue[10];
+        int queue_size;
 };
 
 #endif
