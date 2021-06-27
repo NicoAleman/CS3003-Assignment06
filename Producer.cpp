@@ -10,7 +10,7 @@ using namespace std;
 
 class Producer {
     public:
-        Producer(string nameIn, ItemQueue queueIn) {
+        Producer(string nameIn, ItemQueue &queueIn) {
             name = nameIn;
             queue = queueIn;
         }

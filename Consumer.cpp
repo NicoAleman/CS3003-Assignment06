@@ -6,7 +6,7 @@ using namespace std;
 
 class Consumer {
     public:
-        Consumer(string nameIn, ItemQueue queueIn) {
+        Consumer(string nameIn, ItemQueue &queueIn) {
             name = nameIn;
             queue = queueIn;
         }

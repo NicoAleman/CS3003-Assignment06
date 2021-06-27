@@ -8,11 +8,11 @@ main() {
     ItemQueue queue = ItemQueue(); // Initialize Queue
 
     // Initialize Producers and Consumers
-    Producer produce1 = Producer("produce1",queue);
-    Producer produce2 = Producer("produce2",queue);
-    Consumer consume1 = Consumer("consume1",queue);
-    Consumer consume2 = Consumer("consume2",queue);
-    Consumer consume3 = Consumer("consume3",queue);
+    Producer produce1 = Producer("produce1", queue);
+    Producer produce2 = Producer("produce2", queue);
+    Consumer consume1 = Consumer("consume1", queue);
+    Consumer consume2 = Consumer("consume2", queue);
+    Consumer consume3 = Consumer("consume3", queue);
 
     // Start running Producers and Consumers
     produce1.produce();
