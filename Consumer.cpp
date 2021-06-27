@@ -1,6 +1,7 @@
 #include "ItemQueue.h"
 #include <string>
 #include <iostream>
+#include <ostream>
 using namespace std;
 
 class Consumer {

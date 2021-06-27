@@ -1,5 +1,7 @@
 #include "ItemQueue.h"
 #include <string>
+#include <ostream>
+#include <iostream>
 //for the rand function
 #include <stdlib.h>
 #include <thread>
