@@ -18,7 +18,13 @@ main() {
     // Start running Producers and Consumers on individual threads
     thread p1(&Producer::produce, produce1);
     thread p2(&Producer::produce, produce2);
-    thread p3(&Consumer::consume, consume1);
-    thread c1(&Consumer::consume, consume2);
-    thread c2(&Consumer::consume, consume3);
+    thread c1(&Consumer::consume, consume1);
+    thread c2(&Consumer::consume, consume2);
+    thread c3(&Consumer::consume, consume3);
+
+    p1.join();
+    p2.join();
+    c1.join();
+    c2.join();
+    c3.join();
 }
