@@ -1,6 +1,7 @@
 #include "Producer.cpp"
 #include "Consumer.cpp"
 #include <mutex>
+#include <thread>
 #include <iostream>
 using namespace std;
 
@@ -14,15 +15,10 @@ main() {
     Consumer consume2 = Consumer("consume2", queue);
     Consumer consume3 = Consumer("consume3", queue);
 
-    // Start running Producers and Consumers
-    produce1.produce();
-    produce2.produce();
-    consume1.consume();
-    consume2.consume();
-    consume3.consume();
-
-    // *PLACEHOLDER* //
-    cout << "Press ENTER to continue....." << endl;
-    cin.ignore(1);
-    // ///////////// //
+    // Start running Producers and Consumers on individual threads
+    thread p1(&Producer::produce, produce1);
+    thread p2(&Producer::produce, produce2);
+    thread p3(&Consumer::consume, consume1);
+    thread c1(&Consumer::consume, consume2);
+    thread c2(&Consumer::consume, consume3);
 }

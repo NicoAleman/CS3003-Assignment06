@@ -21,6 +21,8 @@ class Consumer {
                     Item thing = queue.take(); // Grab item from front of queue
                     cout << "Consumer " << name << ": Consumed Item #" << thing.getId() << " from Producer " << thing.getProducer() << endl;
                 }
+
+                this_thread::sleep_for (chrono::seconds(rand() % 5 + 1)); // Thread waits before consuming next item
             }
         }
 
