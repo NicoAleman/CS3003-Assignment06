@@ -11,9 +11,16 @@ class Consumer {
         }
 
         void consume() {
-            Item thing = queue.take();
-            //The java version uses a logger here, but I don't think that exists in C++, so I figure a cout is the next best thing
-            cout << "Consumer " << name << " consume item " << thing.getId() << " produced by " << thing.getProducer() << endl;
+            while(true) { // Loop until program is ended
+                if (queue.isEmpty()) {
+                    cout << "Consumer " << name << ": Queue is empty, waiting for item to be produced..." << endl;
+                    // Put thread to sleep until signal from a Producer thread
+                }
+                else {
+                    Item thing = queue.take(); // Grab item from front of queue
+                    cout << "Consumer " << name << ": Consumed Item #" << thing.getId() << " from Producer " << thing.getProducer() << endl;
+                }
+            }
         }
 
     private:
