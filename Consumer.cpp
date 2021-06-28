@@ -1,7 +1,6 @@
 #include "ItemQueue.h"
 #include <string>
 #include <iostream>
-#include <ostream>
 using namespace std;
 
 class Consumer {
@@ -13,7 +12,7 @@ class Consumer {
         void consume(ItemQueue* queue) {
             while(true) { // Loop until program is ended
                 this_thread::sleep_for (chrono::seconds(rand() % 5 + 3)); // Thread waits before consuming next item
-                
+
                 if (queue -> isEmpty()) {
                     cout << "Consumer " << name << ": Queue is empty, waiting for item to be produced..." << endl;
                 }

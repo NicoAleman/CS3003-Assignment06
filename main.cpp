@@ -1,8 +1,6 @@
 #include "Producer.cpp"
 #include "Consumer.cpp"
-#include <mutex>
 #include <thread>
-#include <iostream>
 using namespace std;
 
 main() {
