@@ -14,7 +14,7 @@ class Consumer {
         void consume() {
             while(true) { // Loop until program is ended
                 if (queue.isEmpty()) {
-                    cout << "Consumer " << name << ": Queue is empty, waiting for item to be produced..." << endl;
+                    // cout << "Consumer " << name << ": Queue is empty, waiting for item to be produced..." << endl;
                     // Put thread to sleep until signal that queue is no longer empty
                 }
                 else {

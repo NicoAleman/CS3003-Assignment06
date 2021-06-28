@@ -13,6 +13,7 @@ class Producer {
         Producer(string nameIn, ItemQueue &queueIn) {
             name = nameIn;
             queue = queueIn;
+            itemId = 1;
         }
 
         void produce() {

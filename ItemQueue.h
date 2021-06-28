@@ -27,9 +27,18 @@ class ItemQueue {
 
         // Adds item to back of queue
         void put(Item item) {
-            cout << "Item produced" << endl;
             queue[queue_size] = item;
             queue_size += 1;
+
+            // DEBUG MESSAGE //
+            cout << "Item produced: ";
+            
+            for (int i = 0; i < queue_size; i++) {
+                cout << queue[i].getId() << ", ";
+            }
+
+            cout << endl;
+            // ///////////// //
         }
 
         // Returns and removes item from front of queue
