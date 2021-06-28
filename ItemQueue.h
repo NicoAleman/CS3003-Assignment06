@@ -12,7 +12,7 @@ class ItemQueue {
 
         // Returns if queue is empty
         bool isEmpty() {
-            return (queue_size == 0);
+            return (queue_size == 0) || (queue[0].getProducer() == "N/A");
         }
 
         // Returns if queue is full
