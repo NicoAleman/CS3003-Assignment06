@@ -29,16 +29,6 @@ class ItemQueue {
         void put(Item item) {
             queue[queue_size] = item;
             queue_size += 1;
-
-            // DEBUG MESSAGE //
-            cout << "Item produced: ";
-            
-            for (int i = 0; i < queue_size; i++) {
-                cout << queue[i].getId() << ", ";
-            }
-
-            cout << endl;
-            // ///////////// //
         }
 
         // Returns and removes item from front of queue
